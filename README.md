@@ -1,0 +1,1 @@
+The maximum data transfer rate seems to be about 1.5MB/s in local tests. Therefore, this project has been abandoned and archived here.
