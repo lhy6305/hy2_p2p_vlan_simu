@@ -1,0 +1,66 @@
+{
+  "clog": {
+    "log_file": "hy2_p2p_vlan_log.txt",
+    "debug_mode": false,
+    "trace_mode": false,
+    "log_trace_to_file_only": true,
+    "enable_colored_output": true
+  },
+  "frame_pool": {
+    "max_packet_size": 1024,
+    "incomplete_chunk_ttl": "1000ms",
+    "chunk_cleanup_interval": "1000ms",
+    "max_ready_frames": 256
+  },
+  "hy2": {
+    "client": {
+      "bandwidth_send_max": 0,
+      "bandwidth_recv_max": 0,
+      "open_stream_timeout": "3s",
+      "conn_local_addr": "",
+      "auth_param": "0uaE9UkNiypU",
+      "tls_server_name": "",
+      "tls_allow_insecure": true,
+      "quic": {
+        "stream_recv_window_init": 0,
+        "stream_recv_window_max": 8366608,
+        "conn_recv_window_init": 0,
+        "conn_recv_window_max": 20971520,
+        "max_idle_timeout": "10s",
+        "keepalive_interval": "5s"
+      }
+    },
+    "server": {
+      "bandwidth_send_max": 0,
+      "bandwidth_recv_max": 0,
+      "auth_param": "0uaE9UkNiypU",
+      "quic": {
+        "stream_recv_window_init": 0,
+        "stream_recv_window_max": 8366608,
+        "conn_recv_window_init": 0,
+        "conn_recv_window_max": 20971520,
+        "max_idle_timeout": "10s",
+        "max_incoming_streams": 1024,
+        "disable_path_mtu_discovery": false
+      },
+      "ignore_client_bandwidth": false
+    },
+    "certs": [
+      {
+        "cert": "cert_dev.pem",
+        "private_key": "private_key_dev.pem"
+      }
+    ]
+  },
+  "vlan": {
+    "net_device": "\\Device\\NPF_{0D2B28BC-4C96-4B34-8E62-AAC9CD72AC59}",
+    "local_real_mac": "1E:90:42:D0:EE:00",
+    "local_real_gateway_mac": "6c:44:2a:28:f3:9a",
+    "local_real_ip": "192.168.1.14",
+    "cidr": "10.23.0.0/24",
+    "local_virtual_ip": "10.23.0.1",
+    "packet_send_thread_count": 4,
+    "packet_recv1_thread_count": 4,
+    "packet_recv2_thread_count": 4
+  }
+}
